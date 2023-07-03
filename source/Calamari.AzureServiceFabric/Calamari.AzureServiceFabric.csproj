@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <AssemblyName>Calamari.AzureServiceFabric</AssemblyName>
+    <RootNamespace>Calamari.AzureServiceFabric</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>false</IsPackable>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net452</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.48.1" />
+    <PackageReference Include="Microsoft.ServiceFabric" Version="5.4.145" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Calamari.Scripting\Calamari.Scripting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\*" />
+  </ItemGroup>
+</Project>
